@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans");
+
+/* Color Variables */
+:root {
+  --primary-color: rgb(156, 209, 173);
+  --primary-color-hover: rgb(207, 232, 215);
+  --secondary-color: rgb(0, 0, 0);
+  --secondary-color-hover: rgb(244, 244, 244);
+  --easeOut: all 0.25s ease-out;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--primary-color);
+  height: 100vh;
+}
+
+#welcome {
+  padding: 0;
+  background: url("img/_DSC9931.jpg") no-repeat center/cover;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow-y: hidden;
+}
+
+#welcome .container {
+  margin-top: 13vh;
+  color: var(--secondary-color-hover);
+}
+
+.icons {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 10px;
+  background-color: var(--primary-color);
+  height: 100%;
+  width: 225px;
+  opacity: 0.9;
+  font-size: 3rem;
+}
+
+/* ========= Utility Classes ========= */
+
+i {
+  color: var(--secondary-color);
+}
+
+p {
+  font-size: 10px;
+}
+
+/* ========= Icons ========= */
+.icons > div {
+  margin: auto;
+}
+
+.icons a {
+  text-decoration: none;
+}
+
+.icons i:hover {
+  color: var(--secondary-color-hover);
+  transition: var(--easeOut);
+}
+
+.fullLogo {
+  background: url("img/500x100_LocalThreads_Pantone353C.png") no-repeat center;
+  height: 75px;
+  width: 90%;
+  background-size: contain;
+}
+
+#lead {
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 580px) {
+  #welcome {
+    height: -80vh;
+  }
+
+  .icons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    background-color: var(--primary-color);
+    height: 111px;
+    width: 100%;
+    opacity: 0.9;
+    font-size: 3rem;
+  }
+
+  .fullLogo {
+    display: none;
+  }
+}
